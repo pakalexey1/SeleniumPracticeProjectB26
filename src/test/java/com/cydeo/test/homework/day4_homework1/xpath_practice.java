@@ -24,6 +24,7 @@ public class xpath_practice {
         // Expected: "Clicked on button one!"
         WebElement message = driver.findElement(By.xpath("//p[@id='result']"));
         String actualMessage = message.getText();
+        System.out.println("message.getAttribute() = " + message.getAttribute("id"));
 
         String expectedMessage = "Clicked on button one!";
 
