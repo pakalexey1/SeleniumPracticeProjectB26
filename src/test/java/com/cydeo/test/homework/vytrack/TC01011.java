@@ -54,7 +54,7 @@ public class TC01011 {
 
     @AfterTest
     public void tearDown(){
-        driver.quit();.
+        driver.quit();
     }
 
 }
