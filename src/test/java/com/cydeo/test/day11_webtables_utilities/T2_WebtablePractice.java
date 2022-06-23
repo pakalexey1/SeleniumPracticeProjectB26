@@ -1,6 +1,7 @@
 package com.cydeo.test.day11_webtables_utilities;
 
 import com.cydeo.test.base.TestBase;
+import com.cydeo.test.utilities.WebTableUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -27,7 +28,22 @@ public class T2_WebtablePractice extends TestBase {
         String expectedDateStr = "12/31/2021";
 
         Assert.assertEquals(actualDateStr,expectedDateStr,"Dates don't match");
+    }
 
+    @Test
+    public void test2(){
+        driver.get("https://practice.cydeo.com/web-tables");
+        String customerOrderDate1 = WebTableUtils.returnOrderData(driver, "Alexandra Gray");
+        System.out.println("customerOrderDate1 = " + customerOrderDate1);
+
+        String customerOrderday2 = WebTableUtils.returnOrderData2(driver,"Ned Stark");
+        System.out.println("customerOrderday2 = " + customerOrderday2);
+    }
+
+    @Test
+    public void test3(){
+        driver.get("https://practice.cydeo.com/web-tables");
+        WebTableUtils.orderVerify(driver,"Alexandra Gray","04/15/2021");
     }
 }
 /*
