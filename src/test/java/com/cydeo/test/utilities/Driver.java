@@ -14,7 +14,7 @@ public class Driver {
 
     // We make WebDriver private, because we want to close access from outside of class
     // We make it static, because we will use it inside static method
-    public static WebDriver driver;
+    private static WebDriver driver;
 
     // Create a re-usable utility method which will return the same driver instance when we call it
     public static WebDriver getDriver() {
